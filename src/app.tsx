@@ -1,4 +1,5 @@
 import React from 'react';
+import { RecoilRoot } from 'recoil';
 
 import ReservationContextProvider from './context';
 import Form from './view/form';
@@ -7,9 +8,11 @@ import './normalize.css'
 
 function App() {
   return (
-    <ReservationContextProvider>
-      <Form />
-    </ReservationContextProvider>
+    <RecoilRoot>
+      <ReservationContextProvider>
+        <Form />
+      </ReservationContextProvider>
+    </RecoilRoot>
   )
 }
 
